@@ -11,16 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     locales: 'pt-br',
     initialDate: '2023-01-12',
     editable: true,
-    events: [
+    eventSources: [
       {
-        title: 'event1',
-        start: '2023-01-11T10:00:00',
-        end: '2023-01-11T16:00:00'
-      },
-      {
-        title: 'event2',
-        start: '2023-01-13T10:00:00',
-        end: '2023-01-13T16:00:00'
+        url:'/teste.json',
       }
     ],
     eventLeave: function(info) {
