@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
+    locales: 'pt-br',
     initialDate: '2023-01-12',
     editable: true,
     events: [
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
+    locales: 'pt-br',
     initialDate: '2023-01-12',
     editable: true,
     eventReceive: function(info) {
