@@ -3,8 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var destCalendarEl = document.getElementById('destination-calendar');
 
   var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
-    editable: true,
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+    },
     initialDate: '2023-01-12',
+    editable: true,
     events: [
       {
         title: 'event1',
@@ -23,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   var destCalendar = new FullCalendar.Calendar(destCalendarEl, {
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+    },
     initialDate: '2023-01-12',
     editable: true,
     eventReceive: function(info) {
