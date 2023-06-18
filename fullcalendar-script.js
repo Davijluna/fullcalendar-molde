@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     locales: 'pt-br',
     initialDate: '2023-01-12',
     editable: true,
+    eventSources: [
+      {
+        url:'/pessoas.json',
+      }
+    ],
     eventReceive: function(info) {
       console.log('event received!', info.event);
     }

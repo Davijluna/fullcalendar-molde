@@ -1,94 +1,42 @@
 [
   {
     "title": "Miguel",
-    "start": "2023-06-15",
-    "end": "2023-06-15",
+    "start": "2023-06-15T12:00:00",
+    "end": "2023-06-15T13:30:00",
     "nome": "Miguel",
-    "email": "miguel@email.com.br",
-    "salario": 27211,
-    "estado": "MG",
-    "empresa": "Facebook",
-    "idade": 34,
-    "sexo": "",
-    "cpf": "362.418.524-18"
+    "local": "Sala 1",
+    "color": "#2196F3",
+    "discipline": "Matemática",
+    "mestre": "Prof. Silva"
   },
   {
     "title": "Sophia",
     "start": "2023-06-16",
     "end": "2023-06-16",
     "nome": "Sophia",
-    "email": "sophia@empresa.com.br",
-    "salario": 6971,
-    "estado": "DF",
-    "empresa": "Plastic Co.",
-    "idade": 25,
-    "sexo": "F",
-    "cpf": "742.316.671-52"
+    "local": "Sala 2",
+    "color": "#4CAF50",
+    "discipline": "História",
+    "mestre": "Prof. Santos"
   },
   {
     "title": "Davi",
     "start": "2023-06-17",
     "end": "2023-06-17",
     "nome": "Davi",
-    "email": "davi@hotmail.com",
-    "salario": 10465,
-    "estado": "SC",
-    "empresa": "Facebook",
-    "idade": 51,
-    "sexo": "",
-    "cpf": "725.732.024-10"
+    "local": "Sala 3",
+    "color": "#FFC107",
+    "discipline": "Ciências",
+    "mestre": "Prof. Oliveira"
   },
   {
     "title": "Alice",
     "start": "2023-06-18",
     "end": "2023-06-18",
     "nome": "Alice",
-    "email": "alice@empresa.com.br",
-    "salario": 39010,
-    "estado": "AL",
-    "empresa": "GGTT",
-    "idade": 46,
-    "sexo": "",
-    "cpf": "188.944.026-49"
-  },
-  {
-    "title": "Arthur",
-    "start": "2023-06-19",
-    "end": "2023-06-19",
-    "nome": "Arthur",
-    "email": "arthur@email.com.br",
-    "salario": 8726,
-    "estado": "PE",
-    "empresa": "Governo Federal",
-    "idade": 21,
-    "sexo": "",
-    "cpf": "432.594.262-99"
-  },
-  {
-    "title": "Julia",
-    "start": "2023-06-20",
-    "end": "2023-06-20",
-    "nome": "Julia",
-    "email": "julia@email.com.br",
-    "salario": 24250,
-    "estado": "RO",
-    "empresa": "Uber",
-    "idade": 42,
-    "sexo": "F",
-    "cpf": "475.250.344-19"
-  },
-  {
-    "title": "Pedro",
-    "start": "2023-06-21",
-    "end": "2023-06-21",
-    "nome": "Pedro",
-    "email": "pedro@uol.com.br",
-    "salario": 8679,
-    "estado": "DF",
-    "empresa": "Facebook",
-    "idade": 43,
-    "sexo": "M",
-    "cpf": "637.637.477-88"
+    "local": "Sala 4",
+    "color": "#E91E63",
+    "discipline": "Artes",
+    "mestre": "Prof. Silva"
   }
 ]
-   
