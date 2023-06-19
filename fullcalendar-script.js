@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     eventSources: [
       {
-        url:'/pessoas.json',
+        url:'http://difiores-001-site3.etempurl.com/api/Agenda',
       }
     ],
     eventReceive: function(info) {
