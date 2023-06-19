@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     eventSources: [
       {
-        url:'/teste.json',
+        url:'http://difiores-001-site3.etempurl.com/api/Agenda',
       }
     ],
     eventLeave: function(info) {
