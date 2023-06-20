@@ -3,6 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var destCalendarEl = document.getElementById('destination-calendar');
   var novoCalendarEl = document.getElementById('tree-calendar')
 
+  function getEventContent(eventInfo) {
+    var event = eventInfo.event;
+    var discipline = event.extendedProps.discipline || '';
+    var mentor = event.extendedProps.mentor || '';
+    var student = event.extendedProps.student || '';
+
+    var content = '<div class="fc-event-main">' + discipline + '</div>';
+    content += '<div class="fc-event-sub">' + mentor + ' - ' + student + '</div>';
+
+    return { html: content };
+  }
+
   var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
     headerToolbar: {
       left: 'prev,next today',
@@ -12,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     locales: 'pt-br',
     initialDate: '2023-06-12',
     editable: true,
+    eventContent: getEventContent,
     eventSources: [
       {
         url:'http://difiores-001-site3.etempurl.com/api/Agenda',
@@ -26,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             delete event.start;
             delete event.end;
           });
-
           srcCalendar.addEventSource(events)
         }
       }
@@ -45,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     locales: 'pt-br',
     initialDate: '2023-06-12',
     editable: true,
+    eventContent: getEventContent,
     eventSources: [
       {
         url:'http://difiores-001-site3.etempurl.com/api/Agenda',
@@ -77,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     locales: 'pt-br',
     initialDate: '2023-06-12',
     editable: true,
+    eventContent: getEventContent,
     eventSources: [
       {
         url:'http://difiores-001-site3.etempurl.com/api/Agenda',
