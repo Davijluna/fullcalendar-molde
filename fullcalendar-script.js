@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var srcCalendarEl = document.getElementById('source-calendar');
   var destCalendarEl = document.getElementById('destination-calendar');
+  var novoCalendarEl = document.getElementById('tree-calendar')
 
   var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
     headerToolbar: {
@@ -15,12 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         url:'http://difiores-001-site3.etempurl.com/api/Agenda',
         success: function(data) {
+          var events = data.filter(function(event) {
+            return event.place === 'Sala 1';
+          });
+
           data.forEach(function(event) {
             event.beginEvent = event.start;
             event.endEvent = event.end;
             delete event.start;
             delete event.end;
-          })
+          });
+
+          srcCalendar.addEventSource(events)
         }
       }
     ],
@@ -42,12 +49,17 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         url:'http://difiores-001-site3.etempurl.com/api/Agenda',
         success: function(data) {
+          var events = data.filter(function(event) {
+            return event.place === 'Sala 2';
+          });
           data.forEach(function(event) {
             event.beginEvent = event.start;
             event.endEvent = event.end;
             delete event.start;
             delete event.end;
-          })
+          });
+
+          srcCalendar.addEventSource(events)
         }
       }
     ],
@@ -56,6 +68,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  var novoCalendar = new FullCalendar.Calendar(novoCalendarEl, {
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+    },
+    locales: 'pt-br',
+    initialDate: '2023-06-12',
+    editable: true,
+    eventSources: [
+      {
+        url:'http://difiores-001-site3.etempurl.com/api/Agenda',
+        success: function(data) {
+          var events = data.filter(function(event) {
+            return event.place === 'Sala 3';
+          });
+
+          data.forEach(function(event) {
+            event.beginEvent = event.start;
+            event.endEvent = event.end;
+            delete event.start;
+            delete event.end;
+          });
+
+          novoCalendar.addEventSource(events)
+        }
+      }
+    ],
+    eventLeave: function(info) {
+      console.log('event left!', info.event);
+    },
+  });
+
   srcCalendar.render();
   destCalendar.render();
+  novoCalendar.render();
 });
