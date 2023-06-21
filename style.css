@@ -5,18 +5,6 @@ body {
   /* background-color: darkgray; */
 }
 
-.calendar-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-
-.button-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
 .fc-button {
   display: inline-block;
   padding: 6px 12px;
@@ -33,6 +21,25 @@ body {
 
 .fc-button:hover {
   background-color: #1a252f;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.calendar-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
 .calendar-container {
@@ -59,24 +66,4 @@ flex: 0 0 30%; /* Ajuste a largura conforme necessário */
   margin-right: 20px;
 }
 
-.button-container {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #eaeaea;
-  color: #333;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.button:hover {
-  background-color: #ccc;
-}
-
-
-
+/*  acima já está corrigida.. */
