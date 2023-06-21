@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
     locale: 'pt-br',
     initialDate: '2023-06-12',
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
     locale: 'pt-br',
     initialDate: '2023-06-12',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
     locale: 'pt-br',
     initialDate: '2023-06-12',
