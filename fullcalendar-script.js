@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             delete event.end;
           });
 
-          srcCalendar.addEventSource(events)
+          destCalendar.addEventSource(events)
         }
       }
     ],
