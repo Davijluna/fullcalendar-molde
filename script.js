@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
-    locales: 'pt-br',
+    locale: 'pt-br',
     initialDate: '2023-06-12',
     editable: true,
     eventContent: getEventContent,
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
-    locales: 'pt-br',
+    locale: 'pt-br',
     initialDate: '2023-06-12',
     editable: true,
     eventContent: getEventContent,
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
-    locales: 'pt-br',
+    locale: 'pt-br',
     initialDate: '2023-06-12',
     editable: true,
     eventContent: getEventContent,
