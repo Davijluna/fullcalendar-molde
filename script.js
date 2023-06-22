@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var srcCalendarEl = document.getElementById('source-calendar');
-  var destCalendarEl = document.getElementById('destination-calendar');
-  var novoCalendarEl = document.getElementById('tree-calendar')
+  var calendarEl1 = document.getElementById('source-calendar');
+  var calendarEl2 = document.getElementById('destination-calendar');
+  var calendarEl3 = document.getElementById('tree-calendar');
 
   function getEventContent(eventInfo) {
     var event = eventInfo.event;
@@ -17,110 +17,56 @@ document.addEventListener('DOMContentLoaded', function() {
     return { html: content };
   }
 
-  var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
-    },
-    initialView: 'dayGridDay',
-    locale: 'pt-br',
-    initialDate: '2023-06-12',
-    editable: false,
-    eventContent: getEventContent,
-    eventSources: [
-      {
-        url:'http://difiores-001-site3.etempurl.com/api/Agenda',
-        success: function(data) {
-          var events = data.filter(function(event) {
-            return event.place === 'Sala 1';
-          });
+  function createCalendar(calendarEl, place, FullCalendar) {
+    var dataAtual = new Date();
+    var ano = dataAtual.getFullYear();
+    var mes = ("0" + (dataAtual.getMonth() + 1)).slice(-2);
+    var dia = ("0" + dataAtual.getDate()).slice(-2);
+    var dataFormatada = ano + "-" + mes + "-" + dia;
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
+      },
+      initialView: 'dayGridDay',
+      locale: 'pt-br',
+      initialDate: dataFormatada,
+      editable: false,
+      eventContent: getEventContent,
+      eventSources: [
+        {
+          url: 'http://difiores-001-site3.etempurl.com/api/Agenda',
+          success: function(data) {
+            var events = data.filter(function(event) {
+              return event.place === place;
+            });
 
-          data.forEach(function(event) {
-            event.beginEvent = event.start;
-            event.endEvent = event.end;
-            delete event.start;
-            delete event.end;
-          });
-          srcCalendar.addEventSource(events)
+            data.forEach(function(event) {
+              event.beginEvent = event.start;
+              event.endEvent = event.end;
+              delete event.start;
+              delete event.end;
+            });
+
+            calendar.addEventSource(events);
+          }
         }
-      }
-    ],
-    eventLeave: function(info) {
-      console.log('event left!', info.event);
-    },
-  });
+      ],
+      eventLeave: function(info) {
+        console.log('event left!', info.event);
+      },
+    });
 
-  var destCalendar = new FullCalendar.Calendar(destCalendarEl, {
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
-    },
-    initialView: 'dayGridDay',
-    locale: 'pt-br',
-    initialDate: '2023-06-12',
-    editable: false,
-    eventContent: getEventContent,
-    eventSources: [
-      {
-        url:'http://difiores-001-site3.etempurl.com/api/Agenda',
-        success: function(data) {
-          var events = data.filter(function(event) {
-            return event.place === 'Sala 2';
-          });
-          data.forEach(function(event) {
-            event.beginEvent = event.start;
-            event.endEvent = event.end;
-            delete event.start;
-            delete event.end;
-          });
+    return calendar;
+  }
 
-          destCalendar.addEventSource(events)
-        }
-      }
-    ],
-    eventReceive: function(info) {
-      console.log('event received!', info.event);
-    }
-  });
+  var calendar1 = createCalendar(calendarEl1, 'Sala 1', FullCalendar);
+  var calendar2 = createCalendar(calendarEl2, 'Sala 2', FullCalendar);
+  var calendar3 = createCalendar(calendarEl3, 'Sala 3', FullCalendar);
 
-  var novoCalendar = new FullCalendar.Calendar(novoCalendarEl, {
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
-    },
-    initialView: 'dayGridDay',
-    locale: 'pt-br',
-    initialDate: '2023-06-12',
-    editable: false,
-    eventContent: getEventContent,
-    eventSources: [
-      {
-        url:'http://difiores-001-site3.etempurl.com/api/Agenda',
-        success: function(data) {
-          var events = data.filter(function(event) {
-            return event.place === 'Sala 3';
-          });
 
-          data.forEach(function(event) {
-            event.beginEvent = event.start;
-            event.endEvent = event.end;
-            delete event.start;
-            delete event.end;
-          });
-
-          novoCalendar.addEventSource(events)
-        }
-      }
-    ],
-    eventLeave: function(info) {
-      console.log('event left!', info.event);
-    },
-  });
-
-  srcCalendar.render();
-  destCalendar.render();
-  novoCalendar.render();
+  calendar1.render();
+  calendar2.render();
+  calendar3.render();
 });
