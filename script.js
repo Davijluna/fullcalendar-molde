@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var discipline = event.extendedProps.discipline || '';
     var mentor = event.extendedProps.mentor || '';
     var student = event.extendedProps.student || '';
+    var startTime = event.extendedProps.beginEvent || '';
+    var endTime = event.extendedProps.endEvent || '';
 
-    var content = '<div class="fc-event-main">' + discipline + '</div>';
+    var content = '<div class="fc-event-main">' + discipline + '  -  ' + ' ' + startTime + ' - ' + endTime + '</div>';
     content += '<div class="fc-event-sub">' + mentor + ' - ' + student + '</div>';
 
     return { html: content };
@@ -21,9 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
+    initialView: 'dayGridDay',
     locale: 'pt-br',
     initialDate: '2023-06-12',
-    editable: true,
+    editable: false,
     eventContent: getEventContent,
     eventSources: [
       {
@@ -54,9 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
+    initialView: 'dayGridDay',
     locale: 'pt-br',
     initialDate: '2023-06-12',
-    editable: true,
+    editable: false,
     eventContent: getEventContent,
     eventSources: [
       {
@@ -87,9 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
+    initialView: 'dayGridDay',
     locale: 'pt-br',
     initialDate: '2023-06-12',
-    editable: true,
+    editable: false,
     eventContent: getEventContent,
     eventSources: [
       {
