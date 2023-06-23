@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl2 = document.getElementById('destination-calendar');
   var calendarEl3 = document.getElementById('tree-calendar');
 
+  var uniqueEvents = new Set();
+
   function getEventContent(eventInfo) {
     var event = eventInfo.event;
     var discipline = event.extendedProps.discipline || '';
@@ -42,14 +44,20 @@ document.addEventListener('DOMContentLoaded', function() {
               return event.place === place;
             });
 
-            data.forEach(function(event) {
+              events.forEach(event => {
               event.beginEvent = event.start;
               event.endEvent = event.end;
               delete event.start;
               delete event.end;
             });
 
-            calendar.addEventSource(events);
+            events.forEach(function(event) {
+            var eventId = event.id;
+            if (!uniqueEvents.has(eventId)) {
+              uniqueEvents.add(eventId);
+              calendar.addEventSource(event);
+          }
+          });
           }
         }
       ],
