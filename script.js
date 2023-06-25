@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl1 = document.getElementById('source-calendar');
   var calendarEl2 = document.getElementById('destination-calendar');
   var calendarEl3 = document.getElementById('tree-calendar');
-
+//  criamos uma variável com a função para setar.
   var uniqueEvents = new Set();
 
   function getEventContent(eventInfo) {
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
               events.forEach(event => {
+              console.log(event.place);
               event.beginEvent = event.start;
               event.endEvent = event.end;
               delete event.start;
