@@ -43,20 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
             var events = data.filter(function(event) {
               return event.place === place;
             });
-
               events.forEach(event => {
-              console.log(event.place);
               event.beginEvent = event.start;
               event.endEvent = event.end;
               delete event.start;
               delete event.end;
             });
-
-            events.forEach(function(event) {
-            var eventId = event.id;
-            if (!uniqueEvents.has(eventId)) {
-              uniqueEvents.add(eventId);
-              calendar.addEventSource(event);
+             // buscamos o valor que vem do JSON em event 
+             // guardamos os ids em uma váriavel e usamos o método has para verificar existência do id no json
+             // caso não exista ele será adicionado 
+             // e em seguida chamamos a o método addEventSource para montar o calendário na tela. 
+              events.forEach(function(event) {
+              var eventId = event.id;
+              if (!uniqueEvents.has(eventId)) {
+                uniqueEvents.add(eventId);
+                calendar.addEventSource(event);
           }
           });
           }
