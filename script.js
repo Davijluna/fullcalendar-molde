@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl1 = document.getElementById('source-calendar');
   var calendarEl2 = document.getElementById('destination-calendar');
   var calendarEl3 = document.getElementById('tree-calendar');
+
+  var calendarEl4 = document.getElementById('four-calendar');
+  var calendarEl5 = document.getElementById('five-calendar');
+  var calendarEl6 = document.getElementById('six-calendar');
 //  criamos uma variável com a função para setar.
   var uniqueEvents = new Set();
 
@@ -129,4 +133,8 @@ fetch('./teste.json')
 var calendar1 = createCalendar(calendarEl1, 'Sala 1', FullCalendar);
 var calendar2 = createCalendar(calendarEl2, 'Sala 2', FullCalendar);
 var calendar3 = createCalendar(calendarEl3, 'Sala 3', FullCalendar);
+
+var calendar4 = createCalendar(calendarEl4, 'Sala 4', FullCalendar);
+var calendar5 = createCalendar(calendarEl5, 'Sala 5', FullCalendar);
+var calendar6 = createCalendar(calendarEl6, 'Sala 6', FullCalendar);
 });

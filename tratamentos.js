@@ -1,5 +1,5 @@
 //  1 - get fetch
-fetch('http://difiores-001-site3.etempurl.com/api/Agenda')
+fetch('test.json')
   .then(resposta => resposta.json())
   .then(json => {
     console.log(json)

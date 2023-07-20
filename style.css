@@ -45,13 +45,23 @@ body {
 
 .calendar-container {
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-between;
   margin: 20px 0;
 }
 
 .calendar-wrapper {
-  flex: 1;
-  margin-right: 20px;
+  flex: 0 0 calc(33.33% - 20px); /* Adjust the percentage as needed */
+  margin: 10px;
+  box-sizing: border-box;
+  /* flex: 1;
+  margin-right: 20px; */
+}
+
+@media (max-width: 768px) {
+  .calendar-wrapper {
+    flex: 0 0 calc(50% - 20px);
+  }
 }
 
 .calendar-label {
@@ -65,6 +75,10 @@ body {
 #tree-calendar {
 flex: 0 0 30%; /* Ajuste a largura conforme necessário */
   margin-right: 20px;
+}
+
+#div-container-main {
+
 }
 
 /*  acima já está corrigida.. */
