@@ -6,6 +6,11 @@ body {
   /* background-color: darkgray; */
 }
 
+
+ /* #fc-dom-1, #fc-dom-4, #fc-dom-7 {
+  font-size: 15px;
+} */
+
 .fc-button {
   display: inline-block;
   padding: 6px 12px;
@@ -77,8 +82,8 @@ flex: 0 0 30%; /* Ajuste a largura conforme necessário */
   margin-right: 20px;
 }
 
-#div-container-main {
+/* #div-container-main {
 
-}
+} */
 
 /*  acima já está corrigida.. */
