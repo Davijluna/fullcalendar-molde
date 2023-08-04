@@ -11,6 +11,17 @@ body {
   font-size: 15px;
 } */
 
+/* CABEÇALHO CALENDÁRIO */
+.fc-toolbar-chunk{
+  display: flex;
+  flex-direction: row;
+}
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child){
+  margin-left: 0;
+}
+/* ///// */
+
 .fc-button {
   display: inline-block;
   padding: 6px 12px;
