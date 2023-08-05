@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modelo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Página de Destino</title>
 </head>
-
 <body>
+  <h1>Informações do JSON:</h1>
+  <pre id="json-data"></pre>
 
-  <section class="container">
-    <h1>Pessoas</h1>
-    <div class="resultado"></div>
-  </section>
-  <!-- <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script> -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="scriptTest.js"></script>
-  <script src="tratamentos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Obten a string de parâmetro "data" da URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const jsonDataString = urlParams.get('data');
+
+      // Decodica o JSON para um objeto JavaScript
+      const jsonData = JSON.parse(decodeURIComponent(jsonDataString));
+
+      // Exibe o JSON na página
+      const jsonDataElement = document.getElementById('json-data');
+      jsonDataElement.textContent = JSON.stringify(jsonData, null, 2);
+    });
+  </script>
 </body>
-
 </html>

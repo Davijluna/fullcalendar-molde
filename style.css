@@ -6,7 +6,6 @@ body {
   /* background-color: darkgray; */
 }
 
-
 /* CABEÇALHO CALENDÁRIO */
 .fc-toolbar-chunk{
   display: flex;
@@ -17,7 +16,6 @@ body {
   margin-left: 0;
 }
 /* ///// */
-
 
 .fc-button {
   display: inline-block;

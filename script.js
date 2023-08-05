@@ -96,11 +96,38 @@ document.addEventListener('DOMContentLoaded', function() {
   calendar2.render();
   calendar3.render();
 
-  function setSelectedDay(date) {
-    const selectedDate = moment(date).format('YYYY-MM-DD');
-    selectedDayElement.textContent = selectedDate;
-    window.location.href = '/dia-selecionado'
-    // Você pode realizar outras ações com a data selecionada aqui
+
+
+   // Evento de clique em uma data do calendário
+   calendar1.setOption('dateClick', function(info) {
+    handleDateClick(info, 'Sala 1');
+  });
+
+  calendar2.setOption('dateClick', function(info) {
+    handleDateClick(info, 'Sala 2');
+  });
+
+  calendar3.setOption('dateClick', function(info) {
+    handleDateClick(info, 'Sala 3');
+  });
+
+  // Função para lidar com o clique em uma data
+  function handleDateClick(info, place) {
+    var selectedDate = moment(info.date).format('YYYY-MM-DD'); // Formate a data selecionada usando moment.js
+    var isWeeklyOrMonthly = info.view.type !== 'dayGridDay';
+
+    // Cria o objeto JSON com as informações necessárias
+    var jsonData = {
+      place: place,
+      selectedDate: selectedDate,
+      isWeeklyOrMonthly: isWeeklyOrMonthly
+    };
+
+    // Converte o objeto JSON em uma string para passar como parâmetro na URL
+    var jsonDataString = encodeURIComponent(JSON.stringify(jsonData));
+
+    // Redireciona para a outra página com as informações no parâmetro "data"
+    window.location.href = '/indexTest.html?data=' + jsonDataString;
   }
 });
 
