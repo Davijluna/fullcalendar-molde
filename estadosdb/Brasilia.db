@@ -1,0 +1,1 @@
+INSERT INTO [dbo].[Cities] ([City]) VALUES ('Brasília', SELECT StateId FROM dbo.States WHERE Abbreviation = 'DF');
