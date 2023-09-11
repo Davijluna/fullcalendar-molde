@@ -1,4 +1,4 @@
-axios('http://difiores-001-site3.etempurl.com/Agenda')
+axios('pessoas.json')
 .then(resposta => carregaElementoNaPagina(resposta.data))
 
  const carregaElementoNaPagina = (json) => {
