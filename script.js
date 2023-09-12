@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // variável com a função para setar.
   var uniqueEvents = new Set();
 
-  const selectedDayElement = document.getElementById('selectedDay'); //////////
+  // const selectedDayElement = document.getElementById('selectedDay'); //////////
 
 
   function getEventContent(eventInfo) {
