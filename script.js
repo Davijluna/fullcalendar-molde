@@ -1,31 +1,15 @@
+import { getEventContent } from "./GetEventContent.js";
+// import { createCalendar } from './createCalendar';
+
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl1 = document.getElementById('source-calendar');
   var calendarEl2 = document.getElementById('destination-calendar');
   var calendarEl3 = document.getElementById('tree-calendar');
 
-  // var calendarEl4 = document.getElementById('four-calendar');
-  // var calendarEl5 = document.getElementById('five-calendar');
-  // var calendarEl6 = document.getElementById('six-calendar');
-
 // variável com a função para setar.
   var uniqueEvents = new Set();
 
   // const selectedDayElement = document.getElementById('selectedDay'); //////////
-
-
-  function getEventContent(eventInfo) {
-    var event = eventInfo.event;
-    var discipline = event.extendedProps.discipline || '';
-    var mentor = event.extendedProps.mentor || '';
-    var student = event.extendedProps.student || '';
-    var startTime = event.extendedProps.beginEvent || '';
-    var endTime = event.extendedProps.endEvent || '';
-
-    var content = '<div class="fc-event-main">' + discipline + '  -  ' + ' ' + startTime + ' - ' + endTime + '</div>';
-    content += '<div class="fc-event-sub">' + mentor + ' - ' + student + '</div>';
-
-    return { html: content };
-  }
 
   function createCalendar(calendarEl, place, FullCalendar) {
     var dataAtual = new Date();
