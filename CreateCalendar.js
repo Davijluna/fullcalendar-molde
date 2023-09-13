@@ -1,11 +1,15 @@
+// OK
 import { getEventContent } from "./GetEventContent.js";
 
-export function createCalendar(calendarEl, place, FullCalendar) {
+export function createCalendar(calendarEl, place, FullCalendar) 
+{
   var dataAtual = new Date();
   var ano = dataAtual.getFullYear();
   var mes = ("0" + (dataAtual.getMonth() + 1)).slice(-2);
   var dia = ("0" + dataAtual.getDate()).slice(-2);
   var dataFormatada = ano + "-" + mes + "-" + dia;
+
+  var uniqueEvents = new Set();
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     headerToolbar: {
