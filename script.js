@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl3 = document.getElementById('tree-calendar');
 
 // variável com a função para setar.
-  var uniqueEvents = new Set();
+  
 
   // const selectedDayElement = document.getElementById('selectedDay'); //////////
 
