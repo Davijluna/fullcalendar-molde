@@ -3,6 +3,13 @@ const calendarWrappers = document.querySelectorAll('.calendar-wrapper')
 const calendarNames = ['one', 'two', 'tree', 'four', 'five', 'six'];
 
 calendarWrappers.forEach(function(wrapper) {
-  let label = wrapper.querySelector('.calendar-label').textContent;
-  console.log(label);
+  for(let i = 0; i < calendarNames.length; i += 1) {
+    const id = `${calendarNames[i]}-calendar`;
+    const calendarElement = wrapper.querySelector(`#${id}`);
+    
+    if (calendarElement) {
+      let label = calendarElement.innerText;
+      console.log(label)
+    }
+  }
 })
