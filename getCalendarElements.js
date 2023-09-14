@@ -3,6 +3,7 @@
 export function getCalendarElements() {
   const calendarWrappers = document.querySelectorAll('.calendar-wrapper')
   const calendarNames = ['one', 'two', 'tree', 'four', 'five', 'six'];
+  const calendarElements = [];
 
   calendarWrappers.forEach(function(wrapper) {
     for(let i = 0; i < calendarNames.length; i += 1) {
@@ -11,9 +12,11 @@ export function getCalendarElements() {
   
       if (calendarElement) {
         calendarElement.id = id;
-        console.log(calendarElement).innerText
-        return calendarElement
+        calendarElements.push(calendarElement)
+        // console.log(calendarElement)
+
       }
-  }
-})
+    }
+  });
+  return calendarElements;
 }
