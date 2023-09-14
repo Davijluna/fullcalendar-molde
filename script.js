@@ -3,6 +3,7 @@ import {createCalendar} from "./CreateCalendar.js";
 
 document.addEventListener('DOMContentLoaded', function() 
 {
+  // teste
   var calendarEl1 = document.getElementById('one-calendar');
   var calendarEl2 = document.getElementById('two-calendar');
   var calendarEl3 = document.getElementById('tree-calendar');
