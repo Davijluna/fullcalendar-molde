@@ -1,4 +1,3 @@
-// OK
 import { getEventContent } from "./getEventContent.js";
 
 export function createCalendar(calendarEl, place, FullCalendar) 

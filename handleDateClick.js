@@ -1,5 +1,4 @@
 export function handleDateClick(info, place)
-// OK
 {
   let selectedDate = moment(info.date).format('YYYY-MM-DD'); // Formate a data selecionada usando moment.js
   let isWeeklyOrMonthly = info.view.type !== 'dayGridDay';

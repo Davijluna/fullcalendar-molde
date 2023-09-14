@@ -1,5 +1,4 @@
-// OK
-export   function getEventContent(eventInfo) {
+export function getEventContent(eventInfo) {
   var event = eventInfo.event;
   var discipline = event.extendedProps.discipline || '';
   var mentor = event.extendedProps.mentor || '';

@@ -1,5 +1,3 @@
-// const calendarEls = document.getElementById('div-container-main');
-
 export function getCalendarElements() {
   const calendarWrappers = document.querySelectorAll('.calendar-wrapper')
   const calendarNames = ['one', 'two', 'tree', 'four', 'five', 'six'];
@@ -13,7 +11,7 @@ export function getCalendarElements() {
       if (calendarElement) {
         calendarElement.id = id;
         calendarElements.push(calendarElement)
-        // console.log(calendarElement)
+
 
       }
     }
