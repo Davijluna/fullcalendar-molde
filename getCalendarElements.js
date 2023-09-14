@@ -9,7 +9,10 @@ calendarWrappers.forEach(function(wrapper) {
     
     if (calendarElement) {
       let label = calendarElement.innerText;
-      console.log(label)
+      return label
+      // console.log(label)
     }
   }
 })
+
+export {label}
