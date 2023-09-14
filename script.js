@@ -1,5 +1,6 @@
 import { handleDateClick } from "./HandleDateClick.js";
 import {createCalendar} from "./CreateCalendar.js";
+// import { label } from "./getCalendarElements.js";
 
 document.addEventListener('DOMContentLoaded', function() 
 {
@@ -39,30 +40,3 @@ document.addEventListener('DOMContentLoaded', function()
     handleDateClick(info, 'Sala 3');
   });
 });
-
-
-// import { handleDateClick } from './handleDateClick.js';//
-// import { getCalendarElements } from './getCalendarElements.js';//
-// import { createAndRenderCalendars } from './createAndRenderCalendars.js';//
-// // import { createCalendar } from './createCalendar.js';
-// import FullCalendar from 'fullcalendar';
-
-// document.addEventListener('DOMContentLoaded', function ()
-// {
-//     var calendarEls = getCalendarElements;
-//     var calendars = createAndRenderCalendars(calendarEls, salaNames, FullCalendar);
-
-//     for (let i = 0; i < salaNames.length; i++) {
-//       calendars[i] = createCalendar(calendarEls[i], salaNames[i], FullCalendar);
-//       calendars[i].render();
-//     }
-
-//     for (let i = 0; i < salaNames.length; i++) {
-//       (function (index) {
-//         calendars[i].setOption('dateClick', function(info) {
-//           handleDateClick(info, salaNames[index]);
-//       });
-//         })(i);
-//       }
-// });
-
