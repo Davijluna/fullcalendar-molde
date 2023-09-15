@@ -5,48 +5,53 @@
 <link rel="stylesheet" href="style.css">
 <script src='/index.global.js'></script>
 <script src="fullcalendar-6.1.8/packages/core/locales/pt-br.global.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Agenda</title>
 </head>
 <body>
-  <a href="http://difiores-001-site6.etempurl.com/Agenda/Create" target="_blank">
-    <button class="fc-button fc-button-primary" class="button">Cadastro</button>
-  </a>
+  <footer>
+    <a href="http://difiores-001-site6.etempurl.com/Agenda/Create" target="_blank">
+      <button class="btn btn-primary btn-sm">Cadastro</button>
+    </a>
+  </footer>
 
-  <div id="div-container-main">
+  <div id="div-container-main" class="container-fluid">
 
-    <div class='calendar-container'>
+    <div class='calendar-container container text-center'>
 
-      <div class="calendar-wrapper">
-          <div class="calendar-label">Sala 1</div>
-          <div id="one-calendar"></div>
+      <div class="row">
+          <div class="col-6 col-sm-4 calendar-wrapper">
+              <div class="calendar-label">Sala 1</div>
+              <div id="one-calendar"></div>
+          </div>
+
+          <div class="col-6 col-sm-4 calendar-wrapper">
+            <div class="calendar-label">Sala 2</div>
+            <div id="two-calendar"></div>
+          </div>
+
+          <div class="col-6 col-sm-4 calendar-wrapper">
+            <div class="calendar-label">Sala 3</div>
+            <div id='tree-calendar'></div>
+          </div>
       </div>
 
-      <div class="calendar-wrapper">
-        <div class="calendar-label">Sala 2</div>
-        <div id="two-calendar"></div>
-      </div>
+      <div class="row">
+          <div class="col-6 col-sm-4 calendar-wrapper">
+            <div class="calendar-label">Sala 4</div>
+            <div id='four-calendar'></div>
+          </div>
 
-      <div class="calendar-wrapper">
-        <div class="calendar-label">Sala 3</div>
-        <div id='tree-calendar'></div>
-      </div>
+          <div class="col-6 col-sm-4 calendar-wrapper">
+            <div class="calendar-label">Sala 5</div>
+            <div id='five-calendar'></div>
+          </div>
 
-      <div class="calendar-wrapper">
-        <div class="calendar-label">Sala 4</div>
-        <div id='four-calendar'></div>
+          <div class="col-6 col-sm-4 calendar-wrapper">
+            <div class="calendar-label">Sala 6</div>
+            <div id='six-calendar'></div>
+          </div> 
       </div>
-
-      <div class="calendar-wrapper">
-        <div class="calendar-label">Sala 5</div>
-        <div id='five-calendar'></div>
-      </div>
-
-      <div class="calendar-wrapper">
-        <div class="calendar-label">Sala 6</div>
-        <div id='six-calendar'></div>
-      </div> 
-  
-    
     </div>
 
   </div>
@@ -54,6 +59,7 @@
   <p>Dia clicado: <span id="selectedDay"></span></p>
 
   <script type="module" src="script.js"></script>
+  <!-- <script type="module" src=""></script> -->
   <!-- <script type="module" src="getCalendarElements.js"></script> -->
 <!-- <script type="module" src="GetEventContent.js"></script> -->
 
