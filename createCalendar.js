@@ -12,8 +12,8 @@ export function createCalendar(calendarEl, place, FullCalendar)
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
+      left: 'title today,prev,next',
+      center: '',
       right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
     },
     initialView: 'dayGridDay',

@@ -7,6 +7,10 @@ body {
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
+.calendar-container {
+  margin:none ;
+}
+
 .calendar-label {
   font-size: 25px;
   font-weight: bold;
@@ -27,3 +31,7 @@ body {
 .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr .fc-button {
   padding: 5px 10px; /* Ajuste esses valores para definir o tamanho desejado */
 }
+
+/* .fc-media-screen {
+  padding: none;;
+} */
