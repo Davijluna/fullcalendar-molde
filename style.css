@@ -17,21 +17,22 @@ body {
   margin-bottom: 10px;
 }
 
-.fc-header-toolbar.fc-toolbar.fc-toolbar-ltr .fc-button {
+/* .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr .fc-button {
   padding: 5px 2px;
   font-size: 10px; 
 }
 
 /* Reduza o tamanho de todos os elementos na classe fc-header-toolbar fc-toolbar fc-toolbar-ltr */
 .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
-  font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
+  font-size: 10px;
 }
+
+.calendar-wrapper {
+  width: 200px;
+}
+
 
 /* Ajuste o tamanho dos botões na classe fc-header-toolbar fc-toolbar fc-toolbar-ltr */
-.fc-header-toolbar.fc-toolbar.fc-toolbar-ltr .fc-button {
-  padding: 5px 10px; /* Ajuste esses valores para definir o tamanho desejado */
-}
-
-/* .fc-media-screen {
-  padding: none;;
-} */
+/* .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr .fc-button {
+  padding: 5px 10px;
+}  */
