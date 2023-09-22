@@ -24,13 +24,28 @@ body {
 
 /* Reduza o tamanho de todos os elementos na classe fc-header-toolbar fc-toolbar fc-toolbar-ltr */
 .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .calendar-wrapper {
-  width: 200px;
+  width: 20px;
 }
 
+/* Aumenta o tamanho das células do calendário mês */
+.fc-day {
+  width: 50px; /* Largura aumentada */
+  height: 50px; /* Altura aumentada */
+}
+
+/* Aumenta o tamanho dos eventos */
+.fc-event {
+  font-size: 16px; /* Aumenta o tamanho da fonte dos eventos */
+  padding: 10px; /* Espaçamento interno aumentado */
+}
+
+.fc-daygrid-day-events {
+  font-size: 10px;
+}
 
 /* Ajuste o tamanho dos botões na classe fc-header-toolbar fc-toolbar fc-toolbar-ltr */
 /* .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr .fc-button {
