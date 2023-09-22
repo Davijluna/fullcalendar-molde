@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-   // Evento de clique em uma data do calendário
-   calendar1.setOption('dateClick', function(info) {
+  // Evento de clique em uma data do calendário
+  calendar1.setOption('dateClick', function(info) {
     handleDateClick(info, 'Sala 1');
   });
 
@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //   calendar.render();
 // ////////////////////////////////////
-  // function setSelectedDay(date) {
-  //   const selectedDate = moment(date).format('YYYY-MM-DD');
-  //   selectedDayElement.textContent = selectedDate;
-  //   // Você pode realizar outras ações com a data selecionada aqui
-  // }
+// function setSelectedDay(date) {
+//   const selectedDate = moment(date).format('YYYY-MM-DD');
+//   selectedDayElement.textContent = selectedDate;
+//   // Você pode realizar outras ações com a data selecionada aqui
+// }
 // })
 // .catch(error => {
 //   console.error('Erro ao carregar o arquivo JSON:', error);
